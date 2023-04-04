@@ -22,10 +22,9 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        if (auth()->check()) {
-            return 'logado com sucesso no sistema';
-        }
-        return 'nao logado no sistema';
+        $user_id = auth()->user()->id;
+        $tarefas = Tarefa::where('user_id', $user_id)->paginate(2);
+        return view('tarefa.index', ['tarefas' => $tarefas]);
     }
 
     /**
@@ -46,7 +45,9 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        $tarefa = Tarefa::create($request->all());
+        $dados = $request->all();
+        $dados['user_id'] = auth()->user()->id;
+        $tarefa = Tarefa::create($dados);
         $dest = auth()->user()->email;
         Mail::to($dest)->send(new NovaTarefaMail($tarefa));
         return redirect()->route('tarefa.show', ['tarefa' => $tarefa->id]);
