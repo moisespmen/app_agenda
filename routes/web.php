@@ -23,11 +23,10 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::get('tarefa/exportacao', 'App\Http\Controllers\TarefaController@exportacao')->name('tarefa.exportacao');
 Route::resource('tarefa', 'App\Http\Controllers\TarefaController')->middleware('verified');//->middleware('auth');
 
 
 Route::get('mensagem-teste', function() {
-    return new MensagemTesteMail();
-   // Mail::to('moisespmen@gmail.com')->send(new MensagemTesteMail);
-    //return 'E-mail enviado com sucesso!';
+    return new MensagemTesteMail();   
 });
