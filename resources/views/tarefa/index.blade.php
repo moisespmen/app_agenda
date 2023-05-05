@@ -6,7 +6,8 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header"> Tarefas
-                    <a class="float-right ml-3" href="{{ route('tarefa.exportacao') }}" title="Exportar"><i class="fa-solid fa-file-excel"></i> </a>
+                    <a class="float-right ml-3" href="{{ route('tarefa.exportacao') }}" title="Exportar XLS"><i class="fa-solid fa-file-excel"></i> </a>
+                    <a class="float-right ml-3" href="{{ route('tarefa.exportar') }}" title="Exportar PDF" target="_blank"><i class="fa-solid fa-file-pdf"></i> </a>
                     <a class="float-right" href="{{ route('tarefa.create') }}" title="Adicionar Tarefa"> <i class="fa-solid fa-plus"></i> </a>
                 </div>
                 <div class="card-body">
