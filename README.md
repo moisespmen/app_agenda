@@ -2,12 +2,19 @@
 Este projeto apresenta uma proposta de aplicação web de gerenciamento de tarefas. 
 O objetivo deste aplicativo é oferecer uma solução eficiente e fácil de usar para gerenciar tarefas pessoais e profissionais.
 
+## Tecnologias Utilizadas
+
+PHP (Laravel)
+JavaScript(Vue)
+PostgreSQL
+
 ## Como testar
 ### Pré-requisitos
 Git
 https://git-scm.com/downloads
 
 Banco de Dados
+Postgres
 
 Node 18+
 https://nodejs.org/en
