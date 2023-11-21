@@ -4,9 +4,9 @@ O objetivo deste aplicativo é oferecer uma solução eficiente e fácil de usar
 
 ## Tecnologias Utilizadas
 
-PHP (Laravel)
-JavaScript(Vue)
-PostgreSQL
+PHP (Laravel) <br>
+JavaScript(Vue) <br>
+PostgreSQL <br>
 
 ## Como testar
 ### Pré-requisitos
